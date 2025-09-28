@@ -1,0 +1,70 @@
+
+.lotto-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+header{
+    background-color: #4B89DC;
+    color: white;
+    width:100%;
+}
+article{
+    margin: 20px;
+    border-radius: 5px;
+}
+article > input{
+    background-color: #4B89DC;
+    color: white;
+    width:100%;
+    border-radius:5px;
+    border-style: none;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.lotto-container > input{
+    width:45px;
+    height:45px;
+    border-radius: 50%;
+    margin: 15px;
+    padding: 0px;
+    font-size: 20px;
+    text-align: center;
+    border-style: none;
+    color: white;
+}
+p,label{
+    margin: 0px;
+    padding: 5px;
+    font-size:16px;
+}
+h1,h3 {
+    margin:0px;
+    padding:5px;
+}
+.modal-content {
+    width: 180px;
+    height: 45px;
+    text-align: center;
+    border-top-style:solid;
+    border-bottom-style: solid;
+    border-color:#D9D9D9;
+    border-width:thin;
+}
+.modal-row{
+    display:flex;
+    flex-direction:row;
+    justify-items:center;
+}
+.window{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    margin:30px;
+    border-style:solid;
+    border-color:black;
+    border-width:thin;
+    border-radius:5px;
+}
