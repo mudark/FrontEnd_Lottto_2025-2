@@ -3,64 +3,65 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
+        <script src="js.js" defer></script>
         <title>로또</title>
     </head>
-    <body style="display:flex; align-items: center; flex-direction:column;">
+    <body>
         <header >
             <h1>로또</h1>
         </header>
         <section class="window">
-            <header style="display:flex; flex-direction:column; align-items: center">
+            <div id="main-header">
                 <h1>로또 번호 생성기</h1>
                 <p>행운의 번호를 생성해보세요!</p>
-            </header>
+            </div>
             <main>
                 <article>
                     <h3>당첨 번호 생성</h3>
-                    <div class="lotto-container">
-                        <input  type="button" value="?" style="background-color: #FBC400;">
-                        <input  type="button" value="?" style="background-color: #69C8F2;">
-                        <input  type="button" value="?" style="background-color: #FF7272;">
-                        <input  type="button" value="?" style="background-color: #AAAAAA;">
-                        <input  type="button" value="?" style="background-color: #B0D840;">
-                        <input  type="button" value="?" style="background-color: #B49FFF;">
-                        <input  type="button" value="?" style="background-color: #FF7F48;">
+                    <div class="lotto-container" id="input-ball">
+                        <input  type="button" value="?" class="yellow">
+                        <input  type="button" value="?" class="red">
+                        <input  type="button" value="?" class="blue">
+                        <input  type="button" value="?" class="gray">
+                        <input  type="button" value="?" class="green">
+                        <input  type="button" value="?" class="purple">
+                        <input  type="button" value="?" class="orange">
                     </div>
-                    <input type="button" value="번호 생성하기">
+                    <input id="input-btn" type="button" value="번호 생성하기">
                 </article>
                 <article>
                     <h3>또 구매하기</h3>
-                    <label>구매 수량 : <input type="text"></label>
+                    <label>구매 수량 : <input type="text" id="quantity"></label>
                     <p>총 금액 : 1000원 (1장당 1000원)</p>
-                    <input type="button" value="구매하기">
+                    <input id="buy-btn" type="button" value="구매하기">
                 </article>
-                <article style="display:block; background-color:#F5F5F5;">
+                <article id="output">
                     <h3>당첨 결과 확인</h3>
                     <p>이번주 당첨 번호 :</p>
-                    <div class="lotto-container">
-                        <input  type="button" value="?" style="background-color: #FBC400;">
-                        <input  type="button" value="?" style="background-color: #69C8F2;">
-                        <input  type="button" value="?" style="background-color: #FF7272;">
-                        <input  type="button" value="?" style="background-color: #AAAAAA;">
-                        <input  type="button" value="?" style="background-color: #B0D840;">
-                        <input  type="button" value="?" style="background-color: #B49FFF;">
-                        <input  type="button" value="?" style="background-color: #FF7F48;">
+                    <div class="lotto-container" id="winning-ball">
+                        <input  type="button" value="?" class="yellow">
+                        <input  type="button" value="?" class="red">
+                        <input  type="button" value="?" class="blue">
+                        <input  type="button" value="?" class="gray">
+                        <input  type="button" value="?" class="green">
+                        <input  type="button" value="?" class="purple">
+                        <input  type="button" value="?" class="orange">
                     </div>
                     <p>내가 구매한 번호 :</p>
-                    <div class="lotto-container">
-                        <input  type="button" value="?" style="background-color: #FBC400;">
-                        <input  type="button" value="?" style="background-color: #69C8F2;">
-                        <input  type="button" value="?" style="background-color: #FF7272;">
-                        <input  type="button" value="?" style="background-color: #AAAAAA;">
-                        <input  type="button" value="?" style="background-color: #B0D840;">
-                        <input  type="button" value="?" style="background-color: #B49FFF;">
-                        <input  type="button" value="?" style="background-color: #FF7F48;">
+                    <div class="lotto-container" id="buy-ball">
+                        <input  type="button" value="?" class="yellow">
+                        <input  type="button" value="?" class="red">
+                        <input  type="button" value="?" class="blue">
+                        <input  type="button" value="?" class="gray">
+                        <input  type="button" value="?" class="green">
+                        <input  type="button" value="?" class="purple">
+                        <input  type="button" value="?" class="orange">
                     </div>
-                    <input type="button" value="결과 확인하기" style="margin-left: 50px; margin-right: 50px; width: calc(100% - 100px)">
+                    <input type="button" value="결과 확인하기" id="result-btn">
                 </article>
             </main>
         </section>
-        <section class="window">
+        <section id="result" class="window">
             <h1 style="padding:20px;">당첨 결과</h1>
             <div class="modal-row">
                 <h3 class="modal-content">일치 갯수</h3>
@@ -70,31 +71,31 @@
             <div class="modal-row">
                 <p class="modal-content">3개</p>
                 <p class="modal-content">5,000원</p>
-                <p class="modal-content">n개</p>
+                <p class="modal-content">0개</p>
             </div>
             <div class="modal-row">
                 <p class="modal-content">4개</p>
                 <p class="modal-content">50,000원</p>
-                <p class="modal-content">n개</p>
+                <p class="modal-content">0개</p>
             </div>
             <div class="modal-row">
                 <p class="modal-content">5개</p>
                 <p class="modal-content">150,000원</p>
-                <p class="modal-content">n개</p>
+                <p class="modal-content">0개</p>
             </div>
             <div class="modal-row">
                 <p class="modal-content">5개+보너스</p>
                 <p class="modal-content">15,000,000원</p>
-                <p class="modal-content">n개</p>
+                <p class="modal-content">0개</p>
             </div>
             <div class="modal-row">
                 <p class="modal-content">6개</p>
                 <p class="modal-content">200,000,000원</p>
-                <p class="modal-content">n개</p>
+                <p class="modal-content">0개</p>
             </div>
             <article>
-                <p>당신의 당첨금은 총 XXXX원 입니다.</p>
-                <input type="button" value="닫기">
+                <p id="result-text">당신의 당첨금은 총 XXXX원 입니다.</p>
+                <input id="close-btn" type="button" value="닫기">
             </article>
         </section>
     </body>

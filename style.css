@@ -68,3 +68,33 @@ h1,h3 {
     border-width:thin;
     border-radius:5px;
 }
+#main-header{
+    display:flex;
+    flex-direction:column;
+    align-items: center
+}
+body{
+    display:flex;
+    align-items: center;
+    flex-direction:column;
+}
+#result-btn {
+    margin-left: 50px;
+    margin-right: 50px;
+    width: calc(100% - 100px)
+}
+#output {
+    display:block;
+    background-color:#F5F5F5;
+}
+.yellow {background-color: #FBC400;}
+.blue {background-color: #69C8F2;}
+.red {background-color: #FF7272;}
+.green {background-color: #B0D840;}
+.gray {background-color: #AAAAAA;}
+.purple {background-color: #B49FFF;}
+.orange {background-color: #FF7F48;}
+
+#result {
+    display: none;
+}
