@@ -4,6 +4,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    position:relative;
 }
 header{
     background-color: #4B89DC;
@@ -84,7 +85,7 @@ body{
     width: calc(100% - 100px)
 }
 #output {
-    display:block;
+    display:none;
     background-color:#F5F5F5;
 }
 .yellow {background-color: #FBC400;}
@@ -97,4 +98,21 @@ body{
 
 #result {
     display: none;
+    z-index:2;
+    top:50px;
+    position:fixed;
+    background-color:white;
+}
+#modal-background {
+    display:none;
+    z-index:1;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.5);
+    position:fixed;
+}
+.star {
+    position:absolute;
+    top:7px;
+    right:7px;
 }

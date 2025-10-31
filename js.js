@@ -37,9 +37,11 @@ document.getElementById('buy-btn').addEventListener('click', () => {
 
   matchCount = myLotto.slice(0, 6).filter(n => mainWinning.includes(n)).length;
   bonusMatch = myLotto.includes(bonus);
+  document.getElementById("output").style.display="block";
 });
 
 document.getElementById('result-btn').addEventListener('click',() => {
+  document.getElementById("modal-background").style.display="flex";
   document.getElementById("result").style.display="flex";
   let price=0;
   switch (matchCount) {
@@ -57,4 +59,5 @@ document.getElementById('result-btn').addEventListener('click',() => {
 
 document.getElementById('close-btn').addEventListener('click',() => {
   document.getElementById("result").style.display="none";
+  document.getElementById("modal-background").style.display="none";
 });
